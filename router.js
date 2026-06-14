@@ -96,11 +96,9 @@ if(userData){
   
 const send = await  sendEmail(email, code);
 if (send) {
-  console.log(send.message); 
-  res.json('sent')
-/* if (send.message ==='email has been sent') {
+ if (send.message ==='email has been sent') {
     res.json('sent');
-  }else{ console.log(send.message) }*/
+  }else{ console.log(send.message) }
 
   
 }else{  console.log('email already exist') }
@@ -127,7 +125,7 @@ router.get('/posts', auth, Admin, async (req, res)=>{
 
 
 
-router.get('/email-otp', verifiedUser, (req, res)=>{
+router.get('/email-otp', (req, res)=>{
   res.sendFile(path.join(dir, 'public', 'email.html'))
 })
 

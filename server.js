@@ -1,8 +1,10 @@
 import express from 'express';
+import dotenv from "dotenv";
+dotenv.config();
 import connectDB from './db.js';
 import router from './router.js';
 import {auth, identifier} from './middleware.js'
-const port = process.env.PORT;
+const port = process.env.PORT||4000;
 import cookieParser from 'cookie-parser'; 
 const app = express();
 app.use(express.json());
@@ -21,7 +23,7 @@ app.use(router)
   
 async function startDB() {
   await connectDB();
-  app.listen(port, ()=>console.log(`the server is running on port ${port}`));
+app.listen(port, ()=>console.log(`the server is running on port ${port}`));
 } 
   
 startDB(); 
