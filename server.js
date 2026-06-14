@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 import connectDB from './db.js';
@@ -7,6 +8,10 @@ import {auth, identifier} from './middleware.js'
 const port = process.env.PORT||3000;
 import cookieParser from 'cookie-parser'; 
 const app = express();
+app.use(cors({
+  origin: ["http://localhost:4000", "https://e-pay-banking-service.onrender.com"],
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser()) 
 app.use(identifier);
