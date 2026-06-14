@@ -329,7 +329,7 @@ color: #10b981;
 }
 
   .trans{
-    border: 1px solid black;
+    border: none;
      background-color: #fff;
     position: fixed;
     top: 0;
