@@ -13,7 +13,7 @@ const newUser={
 }
 
   try {
-    const req= await fetch('http://localhost:4000/login', {
+    const req= await fetch('/login', {
         method: 'POST',
         headers:{"Content-type":"application/json"},
         body: JSON.stringify(newUser)
