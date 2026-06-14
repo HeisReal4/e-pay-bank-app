@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wire Transfer</title>
+  <link rel="stylesheet" href="payment.css">
+  <script defer src="payment.js"></script>
+</head>
+<body>
+  <p class="pp" id="bck" onclick="goback()">back</p>
+
+  <div class="container">
+
+    <div id="transferPage">
+
+      <div class="top">
+        <h1>Wire Transfer</h1>
+        <p>
+          Send secure international payments to bank accounts worldwide.
+        </p>
+      </div>
+
+      <form id="transferForm">
+
+        <div class="input-group">
+          <label>Recipient Full Name</label>
+          <input id="fullname" type="text" placeholder=" Enter first and last name" required>
+        </div>
+
+        <div class="input-group">
+          <label>Country</label>
+          <select required>
+            <option value="">Select country</option>
+            <option>Germany</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Canada</option>
+            <option>Japan</option>
+            <option>Russia</option>
+            <option>Korea</option>
+            <option>Finland</option>
+
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Recipient Address</label>
+          <textarea placeholder="Enter recipient address"></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Bank Name</label>
+          <input id="bankName"  type="text" placeholder="Enter Bank name" required>
+        </div>
+
+        <div class="input-group">
+          <label>Account Number / IBAN</label>
+          <input id="accountNumber" type="text" placeholder="Enter account number" required>
+        </div>
+
+        <div class="input-group">
+          <label>SWIFT / BIC Code</label>
+          <input type="text" placeholder="BOFAUS3N" required>
+        </div>
+
+        <div class="input-group">
+          <label>Amount</label>
+          <input id="amount" type="number" placeholder="0.00" required>
+        </div>
+
+        <div class="input-group">
+          <label>Description</label>
+          <textarea placeholder="Reason for transfer"></textarea>
+        </div>
+
+        <div style="background:#f8fbff; border:1px solid #dbe7ff; padding:14px; border-radius:14px; margin-top:5px;">
+          <p style="font-size:13px; line-height:1.6; color:#555;">
+           <b>Please Note:</b> International transfers may take up to 3–7 business days depending on the receiving bank and country regulations.
+          </p>
+        </div>
+
+        <button onclick="carrytr()" type="submit">
+          Setup Payment
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div class="success-box" id="successBox">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <h2>Payment Setup complete</h2>
+
+      <p>
+        Your transfer has been successfully Setup.
+      </p>
+
+      <button onclick="location.assign('/posts')">
+        Done
+      </button>
+
+    </div>
+
+  </div>
+
+
+ 
+  <div class="pin-modal" id="pinModal">
+
+    <form class="pin-box">
+      <p class="bb" onclick="bb()">back</p>
+
+      <h2>Confirm Setup</h2>
+
+      <p class="pi">
+        Enter your 4-digit transaction PIN to authorize this payment.
+      </p>
+
+      <div class="pin-inputs">
+<input type="tel" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+
+<input type="tel" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+
+<input type="tel" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+
+<input type="tel" maxlength="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+
+      </div>
+      <P class="pii" id="pii"></P>
+
+      <h3 class="hi" id="hi"></h3>
+
+      <button type="button" id="confirmBtn">
+        Confirm Payment Setup
+      </button>
+
+    </form>
+
+  </div>
+
+<div id="toast"></div>
+</body>
+</html>
+
+
+
+  

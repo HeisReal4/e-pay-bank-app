@@ -1,0 +1,352 @@
+   *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body{
+      background:#f2f4f8;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:20px;
+      color:#111;
+    }
+
+    .container{
+      width:100%;
+      max-width:450px;
+      background:white;
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      overflow:hidden;
+    }
+
+    .top{
+      margin-bottom:25px;
+    }
+
+    .top h1{
+      font-size:28px;
+      margin-bottom:8px;
+      color:#111;
+    }
+
+    .top p{
+      color:#666;
+      line-height:1.5;
+      font-size:14px;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .input-group{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .input-group label{
+      font-size:14px;
+      font-weight:bold;
+      color:#222;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+      width:100%;
+      padding:15px;
+      border-radius:14px;
+      border:1px solid #d7d7d7;
+      outline:none;
+      background:#fafafa;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus{
+      border-color:#1565ff;
+      box-shadow:0 0 0 4px rgba(21,101,255,0.1);
+      background:white;
+    }
+
+    textarea{
+      resize:none;
+      min-height:90px;
+    }
+
+    button{
+      border:none;
+      background:#1565ff;
+      color:white;
+      padding:16px;
+      border-radius:14px;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:10px;
+    }
+
+    button:hover{
+      background:#0f4fd1;
+    }
+
+    .pin-modal{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .pin-box{
+      width:100%;
+      max-width:370px;
+      background:white;
+      border-radius:20px;
+      padding:25px;
+      animation:popup 0.3s ease;
+    }
+
+
+
+    @keyframes popup{
+      from{
+        transform:scale(0.8);
+        opacity:0;
+      }
+
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+
+    .pin-box h2{
+      margin-bottom:10px;
+      color:#111;
+    }
+
+    .pi{
+      color:#666;
+      font-size:14px;
+      line-height:1.5;
+      margin-bottom:20px;
+    }
+
+    .pin-inputs{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:20px;
+    }
+
+    .pin-inputs input{
+      width:60px;
+      height:65px;
+      border-radius:14px;
+      border:1px solid #ccc;
+      text-align:center;
+      font-size:24px;
+      font-weight:bold;
+      outline:none;
+    }
+
+    .pin-inputs input:focus{
+      border-color:#1565ff;
+      box-shadow:0 0 0 4px rgba(21,101,255,0.1);
+    }
+
+    .success-box{
+      display:none;
+      text-align:center;
+      padding:30px 10px;
+    }
+
+    .success-box h2{
+      color:#1565ff;
+      margin-bottom:10px;
+    }
+
+    .success-box p{
+      color:#555;
+      line-height:1.6;
+      margin-bottom:20px;
+    }
+
+    .success-icon{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:#1565ff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      font-size:40px;
+      margin:0 auto 20px;
+    }
+
+  
+
+    @media(max-width:450px){
+     
+      body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding:10px;
+        align-items:flex-start;
+      }
+      
+      .pp{
+        margin-left: 10px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: purple;
+  font-weight: 14px;
+      }
+
+      .container{
+        max-width:100%;
+        padding:18px;
+        border-radius:18px;
+        margin-top:10px;
+      }
+
+      .top h1{
+        font-size:24px;
+      }
+
+      .top p{
+        font-size:13px;
+      }
+
+      form{
+        gap:15px;
+      }
+
+      
+    .input-group{
+      display:flex;
+      flex-direction:column;
+      width: 100%;
+      gap:8px;
+      padding: 5px;
+    }
+
+      .input-group label{
+        font-size:13px;
+        margin-left: 5px;
+      }
+
+      .input-group input,
+      .input-group select,
+      .input-group textarea{
+        padding:14px;
+        font-size:14px;
+        border-radius:12px;
+      }
+
+      textarea{
+        min-height:80px;
+      }
+
+      button{
+        width:100%;
+        padding:15px;
+        font-size:15px;
+      }
+
+      .pin-box{
+        padding:20px;
+        border-radius:18px;
+      }
+
+    .pii{
+      align-self: center;
+     color: red;
+    }
+      
+    .hi{
+      align-self: center;
+      color: red;
+    }
+    .bb{
+      font-size: 15px;
+      margin: 0;
+      color: purple;
+    }
+
+      .pin-box h2{
+        font-size:22px;
+      }
+
+      .pi{
+        font-size:14px;
+      }
+
+      .pin-inputs{
+        gap:8px;
+      }
+
+      .pin-inputs input{
+        width:55px;
+        height:60px;
+        font-size:22px;
+      }
+
+      .success-box h2{
+        font-size:24px;
+      }
+
+      .success-box p{
+        font-size:14px;
+      }
+
+
+
+
+      #toast{
+  position:fixed;
+  top:-100px;
+
+  left:50%;
+  transform:translateX(-50%);
+
+  width:90%;
+  max-width:400px;
+
+  padding:15px;
+
+  border-radius:10px;
+
+  text-align:center;
+
+  color:white;
+
+  background:rgb(227, 64, 35);
+
+  transition:0.4s ease;
+
+  z-index:9999;
+}
+
+#toast.show{
+  top:20px;
+}
+
+    }
+    

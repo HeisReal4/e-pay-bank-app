@@ -1,0 +1,17 @@
+.dark{
+  background-color: #0f172a;
+  transition: ease-in-out 0.5s;
+}
+.light{
+  background-color: whitesmoke;
+  transition: ease-in-out 0.5s;
+}
+
+.st:hover{
+  background-color: black;
+}
+
+.appear{
+  display: block;
+  transition: ease-in-out 5s;
+}

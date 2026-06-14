@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-pay Banking service</title>
+  <link rel="stylesheet" href="mode.css">
+  <link rel="stylesheet" href="post.css">
+  <script defer src="post.js"></script>
+</head>
+<body>
+ <div class="master" id="master">
+<div class="sndmas">
+
+<div class="head">
+    <div class="profcnt"><div class="prof">
+      <img id="profilePic">
+    </div><h3>e-Pay</h3></div>
+<div class="noti"><img src="./notification.png" alt="" srcset=""></div>
+</div>
+<p class="userName" id="userName"></p>
+<div class="balanceCard">
+    <div class="cardhead">
+        <p>Balance</p>
+        <p class="tr" onclick="showtr()">Recent transfer</p>
+    </div>
+  <div class="amthold" id="close">
+    <h2 id="balance"></h2>
+
+    <img
+        src="./eyeclose.png"
+        id="eyeBtn"
+        class="eyeBtn"
+        alt="eye icon"
+    >
+  </div>
+
+  <div class="amtholdd" id="open">
+    <img class="eyeBtnn" src="./asterisk.png" alt="" srcset="">
+
+    <img
+        src="./openeye.png"
+        id="eyeBtnn"
+        class="eyeBtn"
+        alt="eye icon"
+    >
+  </div>
+
+</div>
+
+
+<div class="transblog">
+
+<div onclick="paid()"  class="send">
+<img src="./jet.png" alt="" srcset="">
+<p>Demostic Pay</p>
+</div>
+<div onclick="send()" class="send">
+<img src="./transfer.png" alt="" srcset="">
+<p>Wire Pay</p>
+</div>
+<div onclick="paid()" class="send"> 
+    <img src="./dull.png" alt="" srcset="">
+    <p>Deposit</p>
+</div>
+
+</div>
+</div>
+
+<div class="sndmass">
+
+<div class="overview">
+<div class="anal" onclick="paid()">
+     <div class="imgdiv"><img src="./credit.png" alt="" srcset=""></div> 
+    <p>Over-view</p>
+</div>
+
+<div class="anal" onclick="paid()">
+   <div class="imgdiv"><img src="./smartphone.png" alt="" srcset=""></div> 
+    <p>Top-Up</p>
+</div>
+
+<div class="anal" onclick="paid()">
+     <div class="imgdiv"><img src="./pie.png" alt="" srcset=""></div> 
+    <p>Analytics</p>
+</div>
+</div>
+
+<p class="stats">Statistics</p>
+<div class="chart">
+    <div class="chtdate"><p>24 Aug, 2024</p> <div class="income"><p>Income</p></div></div>
+<div class="money"><h3>$27,678.56</h3></div>
+
+<div class="grids">
+    <div class="grid"><div class="gr"></div></div>
+    <div class="grid"><div class="grr"></div></div>
+    <div class="gridd"><div class="rd"></div></div>
+    <div class="grid"><div class="grd"></div></div>
+    <div class="gridd"><div class="rdd"></div></div>
+</div>
+</div>
+
+
+</div>
+  <footer class="footer">
+    <p>&copy; 2023 Global Bank🌎. All rights reserved.</p>
+  </footer>
+ </div>
+
+
+ <div class="trans" id="trrans">
+    <div class="hd"><p class="back" onclick="back()">back</p>    <p class="tit">Recent transfers</p></div>
+    
+
+
+    <div id="history" class="history">
+
+  <div class="trx">
+    <div class="left">
+      <h4>Salary Deposit</h4>
+      <p>Employer Payroll</p>
+      <span>June 15, 2025 • 8:15 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="credit">+₤52,400.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Transfer to John Doe</h4>
+      <p>Bank of America • ****6789</p>
+      <span>June 10, 2025 • 10:22 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤4,500.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Groceries</h4>
+      <p>Walmart Store</p>
+      <span>May 28, 2025 • 1:40 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤10,200.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Gas Station</h4>
+      <p>Fuel Purchase</p>
+      <span>May 12, 2025 • 7:30 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤2,300.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Transfer to Sarah White</h4>
+      <p>Chase Bank • ****4412</p>
+      <span>April 25, 2025 • 3:10 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤8,000.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Salary Deposit</h4>
+      <p>Monthly Payroll</p>
+      <span>March 18, 2025 • 9:00 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="credit">+₤65,700.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Restaurant</h4>
+      <p>Family Dinner</p>
+      <span>February 11, 2025 • 8:45 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤12,600.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Online Shopping</h4>
+      <p>Amazon Order</p>
+      <span>December 20, 2024 • 11:25 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤18,900.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Transfer to Michael Lee</h4>
+      <p>Wells Fargo • ****9920</p>
+      <span>October 03, 2024 • 5:14 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤7,200.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Gas Station</h4>
+      <p>Fuel Purchase</p>
+      <span>August 17, 2024 • 7:20 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤1,850.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Transfer to David Smith</h4>
+      <p>HSBC • ****7311</p>
+      <span>May 29, 2024 • 4:10 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤15,000.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Salary Deposit</h4>
+      <p>Company Payroll</p>
+      <span>January 15, 2024 • 8:00 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="credit">+₤80,000.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Electricity Bill</h4>
+      <p>Utility Payment</p>
+    <span>September 08, 2023 • 2:45 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤11,500.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Internet Subscription</h4>
+      <p>Monthly Plan</p>
+      <span>June 14, 2023 • 9:30 AM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤10,000.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+  <div class="trx">
+    <div class="left">
+      <h4>Transfer to Emma Brown</h4>
+      <p>Citibank • ****5588</p>
+      <span>March 21, 2023 • 6:15 PM</span>
+    </div>
+    <div class="right">
+      <h3 class="debit">-₤6,700.00</h3>
+      <p class="success">Successful</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+    
+ </div>
+
+ <div id="toast"></div>
+
+</body>
+</html>

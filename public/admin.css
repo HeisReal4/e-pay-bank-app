@@ -1,0 +1,209 @@
+
+
+/* =========================
+ GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#f4f7fb;
+
+    padding:20px;
+
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    min-height:100vh;
+
+}
+
+
+/* =========================
+ MAIN ADMIN BOX
+========================= */
+
+.admin-box{
+display: block;
+    width:100%;
+margin-top: 10px;
+    max-width:450px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+/* =========================
+ TITLES
+========================= */
+
+.admin-box h2{
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+    color:#111;
+
+}
+
+
+/* =========================
+ FORMS
+========================= */
+
+.transfer-form,
+#uploadForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+/* =========================
+ INPUTS
+========================= */
+
+.admin-box input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #dcdcdc;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:0.3s;
+
+    background:#fafafa;
+
+}
+
+
+.admin-box input:focus{
+
+    border:1px solid #1565ff;
+
+    background:white;
+
+}
+
+
+/* =========================
+ BUTTONS
+========================= */
+
+.admin-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1565ff;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+.admin-box button:hover{
+
+    background:#0d47c7;
+
+}
+
+
+/* =========================
+ UPLOAD SECTION
+========================= */
+
+.upload-section{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid #e4e4e4;
+
+}
+
+
+/* =========================
+ MOBILE RESPONSIVE
+========================= */
+
+@media screen and (max-width:450px){
+
+    body{
+
+        padding:12px;
+
+    }
+
+    .admin-box{
+
+        padding:20px;
+
+        border-radius:15px;
+
+    }
+
+    .admin-box h2{
+
+        font-size:20px;
+
+    }
+
+    .admin-box input{
+
+        padding:14px;
+
+        font-size:14px;
+
+    }
+
+    .admin-box button{
+
+        padding:14px;
+
+        font-size:14px;
+
+    }
+
+}
