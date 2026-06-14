@@ -4,7 +4,7 @@ dotenv.config();
 import connectDB from './db.js';
 import router from './router.js';
 import {auth, identifier} from './middleware.js'
-const port = process.env.PORT||4000;
+const port = process.env.PORT||3000;
 import cookieParser from 'cookie-parser'; 
 const app = express();
 app.use(express.json());
