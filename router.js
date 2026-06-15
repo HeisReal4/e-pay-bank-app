@@ -54,10 +54,9 @@ if (!emailExist) {
 const send = await  sendEmail(email, code);
 if (send) {
   console.log(send.message); 
-  res.json('sent')
-/* if (send.message ==='email has been sent') {
+ if (send.message ==='email has been sent') {
     res.json('sent');
-  }else{ console.log(send.message) }*/
+  }else{ console.log(send.message) }
   
 }else{  console.log('email already exist') }
 
