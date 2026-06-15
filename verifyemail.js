@@ -12,10 +12,19 @@ const emailSender= nodemailer.createTransport({
 async function sendEmail(to, code) {
   try {
    const send= await emailSender.sendMail({
-      from: process.env.EMAIL,
+      from:`E-pay Banking Service ${process.env.EMAIL} `,
       to: to,
-      subject:"verify your email",
-      text:`Your Email verifacation code is ${code}`
+      subject: "E-Pay Banking Service - Email Verification Code",
+      text:`E-Pay Banking Service
+
+Your verification code is: ${code}
+
+This code will expire in 10 minutes.
+
+If you did not request this code, please ignore this email.
+
+Thank you.
+`
     })
     if (send) {
       return {
