@@ -55,6 +55,7 @@ const send = await  sendEmail(email, code);
 if (send) {
   console.log(send.message); 
  if (send.message ==='email has been sent') {
+   console.log(send.message); 
     res.json('sent');
   }else{ console.log(send.message) }
   
@@ -64,6 +65,7 @@ if (send) {
  
 } catch (error) {
   console.log(error.message);
+  const err= error.message
 }
 
 })
