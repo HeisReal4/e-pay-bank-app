@@ -14,7 +14,7 @@ async function sendEmail(to, code) {
    const send= await emailSender.sendMail({
       from:`E-pay Banking Service ${process.env.EMAIL} `,
       to: to,
-      subject: "Email Verification Code",
+      subject: "E-Pay Banking Service - Email Verification Code",
       text:`E-Pay Banking Service
 
 Your verification code is: ${code}
